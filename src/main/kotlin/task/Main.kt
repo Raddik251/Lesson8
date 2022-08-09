@@ -14,13 +14,13 @@ package task
 
         println("-----------------------------------------------")
 
-        notes1.createComment(1,Comment(1, 1, "Первый коммент к заметке 1"))
+        notes1.createComment(1, Comment(1, 1, "Первый коммент к заметке 1"))
 
-        notes1.createComment(2,Comment(2, 2, "Первый коммент к заметке 2"))
+        notes1.createComment(2, Comment(2, 2, "Первый коммент к заметке 2"))
 
-        notes1.createComment(3,Comment(3, 3, "Первый коммент к заметке 3"))
+        notes1.createComment(3, Comment(3, 3, "Первый коммент к заметке 3"))
 
-        notes1.createComment(3,Comment(4, 3, "Второй коммент к заметке 3"))
+        notes1.createComment(3, Comment(4, 3, "Второй коммент к заметке 3"))
 
         notes1.getComments(3)
 
@@ -40,6 +40,12 @@ package task
 
         notes1.deleteNote(3)
 
-        notes1.getNote(3)
+        notes1.getComments(3) // заметка удалилась, флаг удаления у комментов поменялся
+
+        println("-----------------------------------------------")
+
+        notes1.editNote(Note(3,"Измененная заметка №3", "Измененный текст заметки №3"))
+
+        notes1.getComments(3) // флаг удаления поменялся обратно
 
     }
